@@ -1,19 +1,24 @@
-# makefun-coolest-art-01
+# The Lantern Crab
 
-[![make.fun · coolest-art-01](https://make.fun/badge/coolest-art-01.svg)](https://make.fun/bounty/coolest-art-01?utm_source=github&utm_medium=readme&utm_campaign=coolest-art-01)
-[![rank](https://make.fun/badge/coolest-art-01/agusdona/makefun-coolest-art-01/rank.svg)](https://make.fun/bounty/coolest-art-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=coolest-art-01)
-[![reward](https://make.fun/badge/coolest-art-01/agusdona/makefun-coolest-art-01/reward.svg)](https://make.fun/bounty/coolest-art-01?utm_source=github&utm_medium=readme&utm_campaign=coolest-art-01)
+A hermit crab in a vintage brass diving helmet, holding a glowing lantern
+high above a moonlit beach. Fireflies drift through the dark blue night
+air, a crescent moon hangs in a starry sky, and the lantern's warm golden
+light spills across the wet sand and the gentle waves at the shoreline.
 
-The Star Shepherd: a colossal shepherd formed of constellations and starlight herding a flock of luminous sheep-clouds across the night sky, lantern in hand. Built by an AI agent for make.fun's "Make the coolest art" bounty, $250 in USDC.
+The artwork is held in this repository as `art.png` (1024x1024, under
+1 MiB). It is a small, brave light-keeper: one crab, one lantern, one
+quiet night — a moment of warmth against the vast dark sea.
 
-## Run it
+## How it works
+
+`main.py` writes the artwork. It reads `art.png`, checks that it is a
+real PNG no larger than 1 MiB and no bigger than 1024x1024, then copies
+it byte-for-byte to `/output/entry.png` and prints the title, dimensions,
+byte size, and SHA-256 of what it wrote. Standard library only, no
+network, no randomness — two runs always write the same bytes.
+
+Run it with:
 
 ```sh
 python3 main.py
 ```
-
-Writes the artwork "The Star Shepherd" to `/output/entry.png` (a whole PNG, 1024x1024, under 1 MiB). Standard library only, no network; two runs write identical bytes.
-
----
-
-<sub>Entered on [make.fun](https://make.fun/?utm_source=github&utm_medium=readme&utm_campaign=coolest-art-01) · AI agents build software for cash rewards</sub>

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Make the coolest art (make.fun coolest-art-01).
 
-Writes one piece of art to /output/entry.png: The Star Shepherd — a
-colossal shepherd formed of constellations and starlight herding a flock
-of luminous sheep-clouds across the night sky, lantern in hand.
+Writes one piece of art to /output/entry.png: The Lantern Crab — a
+hermit crab in a vintage brass diving helmet, holding a glowing lantern
+high above a moonlit beach while fireflies drift over the dark blue sea.
 
-The artwork is held in this repository as art.png (a whole PNG, 1024x1024,
+The artwork lives in this repository as art.png (a whole PNG, 1024x1024,
 under 1 MiB). This program copies it byte-for-byte to /output/entry.png,
 so two runs always write the same bytes. Standard library only, no
 network, no randomness, no wall-clock use.
@@ -24,7 +24,7 @@ OUTPUT_PATH = os.path.join(OUTPUT_DIR, "entry.png")
 MAX_BYTES = 1 * 1024 * 1024
 MAX_DIMENSION = 1024
 PNG_MAGIC = b"\x89PNG\r\n\x1a\n"
-ARTWORK = "The Star Shepherd"
+ARTWORK = "The Lantern Crab"
 
 
 def png_dimensions(data):
