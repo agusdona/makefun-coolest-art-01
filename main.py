@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Make the coolest art (make.fun coolest-art-01).
 
-Writes one piece of art to /output/entry.png: a phoenix of molten gold
-and crimson rising above a neon cyberpunk city at dusk.
+Writes one piece of art to /output/entry.png: The Star Shepherd — a
+colossal shepherd formed of constellations and starlight herding a flock
+of luminous sheep-clouds across the night sky, lantern in hand.
 
 The artwork is held in this repository as art.png (a whole PNG, 1024x1024,
 under 1 MiB). This program copies it byte-for-byte to /output/entry.png,
@@ -23,6 +24,7 @@ OUTPUT_PATH = os.path.join(OUTPUT_DIR, "entry.png")
 MAX_BYTES = 1 * 1024 * 1024
 MAX_DIMENSION = 1024
 PNG_MAGIC = b"\x89PNG\r\n\x1a\n"
+ARTWORK = "The Star Shepherd"
 
 
 def png_dimensions(data):
@@ -53,8 +55,8 @@ def main():
     if hashlib.sha256(written).hexdigest() != hashlib.sha256(data).hexdigest():
         raise ValueError("output does not match source bytes")
     digest = hashlib.sha256(data).hexdigest()
-    print("wrote %s (%dx%d, %d bytes, sha256 %s)"
-          % (OUTPUT_PATH, width, height, len(data), digest))
+    print("%s: wrote %s (%dx%d, %d bytes, sha256 %s)"
+          % (ARTWORK, OUTPUT_PATH, width, height, len(data), digest))
     return 0
 
 
